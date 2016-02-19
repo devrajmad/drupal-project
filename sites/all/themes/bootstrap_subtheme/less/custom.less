@@ -1,0 +1,77 @@
+// out: ../css/custom.css, compress: true, strictMath: true
+@lg: 1200px;
+@md: 991px;
+@sm: 768px;
+@xs: 480px;
+@white: #ffffff;
+@menu-hover-color: #ffba19;
+.top-header-with-banner {
+    header {
+        background: url(../images/body-bg.jpg) no-repeat;
+        background-size: cover;
+        padding: 250px 0;
+        .logo {
+            padding: 0;
+            margin: 0;
+            img {
+                width: 100%;
+            }
+        }
+        .logo-text {
+            font-size: 13px;
+            color: #fff;
+            letter-spacing: 1.75px;
+            width: 100%;
+            float: left;
+            margin-top: 5px;
+            @media screen and (min-width: @md) {
+                letter-spacing: 4.8px;
+            }
+            @media screen and (min-width: @lg) {
+                letter-spacing: 5.5px;
+            }
+        }
+    }
+}
+
+.main-menu {
+    nav {
+        .navbar-nav {
+            float: right;
+            li {
+                a {
+                    color: @white;
+                    transition: 0.5s;
+                    -webkit-transition: 0.5s;
+                    -moz-transition: 0.5s;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                    padding: 10px 15px;
+                    @media screen and (min-width: @sm) {
+                        padding: 17px 13px;
+                    }
+                    @media screen and (min-width: @md) {
+                        padding: 25px 25px;
+                    }
+                    @media screen and (min-width: @lg) {
+                        padding: 25px 40px;
+                    }
+                    &:hover {
+                        color: @menu-hover-color;
+                    }
+                }
+            }
+            .active {
+                color: @menu-hover-color;
+                background: none;
+                a {
+                    &:hover {
+                        color: @menu-hover-color;
+                        background: none;
+                    }
+                }
+            }
+        }
+    }
+}
