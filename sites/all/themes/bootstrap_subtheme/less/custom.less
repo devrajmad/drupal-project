@@ -5,11 +5,15 @@
 @xs: 480px;
 @white: #ffffff;
 @menu-hover-color: #ffba19;
+@menu-drop-down-bg-color: #35a6ac;
+@black:#000000;
 .top-header-with-banner {
-    header {
-        background: url(../images/body-bg.jpg) no-repeat;
+    background: url(../images/body-bg.jpg) no-repeat;
         background-size: cover;
-        padding: 250px 0;
+        padding: 250px 0 50px;
+    header {
+        background: none;
+        border: none;
         .logo {
             padding: 0;
             margin: 0;
@@ -38,6 +42,7 @@
     nav {
         .navbar-nav {
             float: right;
+            width: 100%;
             li {
                 a {
                     color: @white;
@@ -49,7 +54,7 @@
                     letter-spacing: 1px;
                     padding: 10px 15px;
                     @media screen and (min-width: @sm) {
-                        padding: 17px 13px;
+                        padding: 17px 11px;
                     }
                     @media screen and (min-width: @md) {
                         padding: 25px 25px;
@@ -60,6 +65,25 @@
                     &:hover {
                         color: @menu-hover-color;
                     }
+                    &:focus{
+                        background: none;
+                    }
+                }
+                
+                .dropdown-menu{
+                    border-radius: 0;
+                    background: @menu-drop-down-bg-color;
+                    li{
+                        a{
+                            padding: 10px;
+                            text-align: center;
+                            &:hover{
+                                color:@black;
+                                background: none;
+                            }
+                        }
+                        
+                    }
                 }
             }
             .active {
@@ -67,6 +91,19 @@
                 background: none;
                 a {
                     &:hover {
+                        color: @menu-hover-color;
+                        background: none;
+                    }
+                }
+            }
+            
+            .open{
+                 a {
+                    &:hover {
+                        color: @menu-hover-color;
+                        background: none;
+                    }
+                     &:focus {
                         color: @menu-hover-color;
                         background: none;
                     }
