@@ -6,11 +6,11 @@
 @white: #ffffff;
 @menu-hover-color: #ffba19;
 @menu-drop-down-bg-color: #35a6ac;
-@black:#000000;
+@black: #000000;
 .top-header-with-banner {
     background: url(../images/body-bg.jpg) no-repeat;
-        background-size: cover;
-        padding: 250px 0 50px;
+    background-size: cover;
+    padding: 250px 0 50px;
     header {
         background: none;
         border: none;
@@ -35,6 +35,21 @@
                 letter-spacing: 5.5px;
             }
         }
+    }
+    .fixed-header-wrapper {
+        transition: 1s;
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+    }
+    .fixed-header {
+        position: fixed;
+        width: 100%;
+        background: #224564;
+        top: 0;
+        left: 0;
+        padding: 30px 0 20px;
+        margin: 0;
+        z-index: 11111;
     }
 }
 
@@ -65,24 +80,22 @@
                     &:hover {
                         color: @menu-hover-color;
                     }
-                    &:focus{
+                    &:focus {
                         background: none;
                     }
                 }
-                
-                .dropdown-menu{
+                .dropdown-menu {
                     border-radius: 0;
                     background: @menu-drop-down-bg-color;
-                    li{
-                        a{
+                    li {
+                        a {
                             padding: 10px;
                             text-align: center;
-                            &:hover{
-                                color:@black;
+                            &:hover {
+                                color: @black;
                                 background: none;
                             }
                         }
-                        
                     }
                 }
             }
@@ -96,14 +109,13 @@
                     }
                 }
             }
-            
-            .open{
-                 a {
+            .open {
+                a {
                     &:hover {
                         color: @menu-hover-color;
                         background: none;
                     }
-                     &:focus {
+                    &:focus {
                         color: @menu-hover-color;
                         background: none;
                     }
@@ -111,4 +123,69 @@
             }
         }
     }
+}
+
+.main-top-banner {
+    h2.block-title {
+        display: none;
+    }
+    .carousel-caption {
+        left: 0;
+        top: 0;
+        padding-bottom: 30px;
+        text-align: center;
+        position: relative;
+        padding: 50px 0;
+        min-height: 300px;
+        @media screen and (min-width: @sm) {
+            text-align: left;
+            left: 9.5%;
+        }
+        h3 {
+            margin: 0;
+            font-size: 24px;
+            width: 100%;
+            text-transform: uppercase;
+            line-height: 60px;
+            font-family: 'Raleway', sans-serif;
+            transition: 0.5s;
+            -webkit-transition: 0.5s;
+            -moz-transition: 0.5s;
+            @media screen and (min-width: @sm) {
+                font-size: 30px;
+                width: 60%;
+            }
+            @media screen and (min-width: @md) {
+                font-size: 40px;
+            }
+            @media screen and (min-width: @lg) {
+                width: 40%;
+            }
+        }
+    }
+    .carousel-control.left {
+        background-image: none;
+    }
+    .carousel-control.right {
+        background-image: none;
+    }
+}
+
+.home-three-block {
+    table {
+        tr {
+            td {
+                width: 33.3%;
+                padding: 0;
+                position: relative;
+                .views-field-field-image{ 
+                    
+                    img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
 }

@@ -74,7 +74,7 @@
  */
 ?>
 <div class="top-header-with-banner">
-    <header id="navbar" role="banner" class="navbar navbar-default">
+    <header id="navbar" role="banner" class="navbar navbar-default fixed-header-wrapper">
       <div class="container">
         <div class="navbar-header col-sm-3">
           <?php if ($logo): ?>
@@ -117,22 +117,22 @@
       </div>
     </header>
     
-      <div role="banner" id="page-header">
+<div role="banner" id="page-header" class="main-top-banner">
     <?php if (!empty($site_slogan)): ?>
       <p class="lead"><?php print $site_slogan; ?></p>
     <?php endif; ?>
 
     <?php print render($page['header']); ?>
-  </div> <!-- /#page-header -->
+</div> <!-- /#page-header -->
     
 </div><!---- main menu and banner end ---->
 
-
+<div class="home-three-block">
+        <?php print render($page['below_header']); ?>
+</div><!---- Home Three Block end ---->
 
 <div class="main-container container">
-
-
-
+  
   <div class="row">
 
     <?php if (!empty($page['sidebar_first'])): ?>
