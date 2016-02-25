@@ -14,8 +14,15 @@ regions[below_header]   = 'Below Header'
 regions[highlighted]    = 'Highlighted'
 regions[help]           = 'Help'
 regions[content]        = 'Content'
+regions[content2]       = 'Content2'
 regions[sidebar_first]  = 'Primary'
 regions[sidebar_second] = 'Secondary'
+regions[parallax]       = 'Parallax'
+regions[above_footer]   = 'Above Footer'
+regions[footer_links_1] = 'Footer Links 1'
+regions[footer_links_2] = 'Footer Links 2'
+regions[footer_links_3] = 'Footer Links 3'
+regions[footer_contact] = 'Footer Contact'
 regions[footer]         = 'Footer'
 regions[page_top]       = 'Page top'
 regions[page_bottom]    = 'Page bottom'
@@ -25,6 +32,7 @@ regions[page_bottom]    = 'Page bottom'
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
 
+stylesheets[all][] = css/main.css
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/custom.css
 
@@ -53,6 +61,10 @@ stylesheets[all][] = css/custom.css
 ; scripts[] = 'bootstrap/js/scrollspy.js'
 ; scripts[] = 'bootstrap/js/tab.js'
 ; scripts[] = 'bootstrap/js/transition.js'
+    scripts[] = 'js/modernizr-2.7.1.min.js'
+    scripts[] = 'js/imagesloaded.js'
+    scripts[] = 'js/skrollr.js'
+    scripts[] = 'js/_main.js'
 ;
 ; ; Disable BootstrapCDN if using Bootstrap source files in your sub-theme.
 ; settings[bootstrap_cdn] = ''

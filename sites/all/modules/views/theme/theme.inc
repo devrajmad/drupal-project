@@ -807,6 +807,7 @@ function template_preprocess_views_view_unformatted(&$vars) {
     if ($default_row_class) {
       $vars['classes'][$id][] = 'views-row';
       $vars['classes'][$id][] = 'views-row-' . $count;
+      $vars['classes'][$id][] = 'views-row-' . $count;
     }
     if ($row_class_special) {
       $vars['classes'][$id][] = 'views-row-' . ($count % 2 ? 'odd' : 'even');

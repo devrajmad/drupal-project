@@ -135,13 +135,7 @@
   
   <div class="row">
 
-    <?php if (!empty($page['sidebar_first'])): ?>
-      <aside class="col-sm-3" role="complementary">
-        <?php print render($page['sidebar_first']); ?>
-      </aside>  <!-- /#sidebar-first -->
-    <?php endif; ?>
-
-    <section<?php print $content_column_class; ?>>
+     <section<?php //print $content_column_class; ?> class="col-sm-9 inner-page-template">
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
@@ -164,15 +158,83 @@
       <?php endif; ?>
       <?php print render($page['content']); ?>
     </section>
+      
+    <?php if (!empty($page['sidebar_first'])): ?>
+      <aside class="col-sm-3 sidebar" role="complementary">
+        <?php print render($page['sidebar_first']); ?>
+      </aside>  <!-- /#sidebar-first -->
+    <?php endif; ?>
+      
 
     <?php if (!empty($page['sidebar_second'])): ?>
       <aside class="col-sm-3" role="complementary">
-        <?php print render($page['sidebar_second']); ?>
+        <?php //print render($page['sidebar_second']); ?>
       </aside>  <!-- /#sidebar-second -->
     <?php endif; ?>
 
   </div>
 </div>
+
+<div class="above-footer-section">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-9 all-links"><?php print render($page['content2']); ?></div>
+            <div class="col-sm-3 online-support">
+                <?php print render($page['sidebar_second']); ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="slide-3" class="homeSlide parallax-area">
+	<div class="bcg" data-center="background-position: 0px 50%;" data-bottom-top="background-position: 0px 40%;" data-top-bottom="background-position: -40px 50%;" data-anchor-target="#slide-3">
+    	<div class="hsContainer">
+    		<div class="hsContent">
+                <?php print render($page['parallax']); ?>
+    			<div class="plaxEl" data-106-top="opacity: 0" data--30p-top="opacity: 1;" data--60p-top="opacity: 0;" data-bottom="opacity: 1; position: fixed; top: 206px; width: 100%; left: 0;"  data-anchor-target="#slide-3">
+		    		
+	    		</div>
+    		</div>
+    	</div>
+    	
+    </div>
+</section>
+
+<div class="footer-logo">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <?php print render($page['above_footer']); ?>
+            </div>
+        </div>    
+    </div>
+</div>
+
 <footer class="footer container">
-  <?php print render($page['footer']); ?>
+    <div class="container">
+        <div class="row main-footer">
+            <div class="col-md-3 col-sm-6 footer-menus">
+                <?php print render($page['footer_links_1']); ?>
+            </div>
+            <div class="col-md-3 col-sm-6 footer-menus">
+                <?php print render($page['footer_links_2']); ?>
+            </div>
+            <div class="col-md-3 col-sm-6 footer-menus">
+                <?php print render($page['footer_links_3']); ?>
+            </div>
+            <div class="col-md-3 col-sm-6 footer-menus">
+                <?php print render($page['footer_contact']); ?>
+                <input type="text" value="Type your email here">
+            </div>
+        </div>
+        <div class="row">
+            <div class="copy-right">
+                <span class="sitename">Sma+rt</span> 
+                &copy; 2016 | <a href="?q=privacy-policy">Privacy Policy</a>
+            </div>
+            <?php print render($page['footer']); ?>
+        </div>
+    </div>
+  
 </footer>

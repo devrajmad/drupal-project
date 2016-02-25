@@ -59,10 +59,8 @@
   <?php print $scripts; ?>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
  
-         <script>
-    
-             
-                 jQuery(window).scroll(function() {    
+<script>
+jQuery(window).scroll(function() {    
     var scroll = jQuery(window).scrollTop();
 
      //>=, not <=
@@ -74,7 +72,8 @@
         jQuery(".fixed-header-wrapper").removeClass("fixed-header");
     }
 });
-     </script> 
+</script>
+    
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div id="skip-link">
